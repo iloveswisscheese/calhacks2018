@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import Header from './contents/Header'
+import Header from '../contents/Header';
+import NotesContainer from '../contents/NotesContainer';
+import AddNoteButton from '../contents/AddNoteButton';
 import {
-	Text,
-	View,
-	StyleSheet,
-	TextInput,
-	ScrollView,
-	TouchableOpacity
-	} from 'react-native';
+    Text,
+    View,
+    StyleSheet,
+    TextInput,
+    ScrollView,
+    TouchableOpacity
+    } from 'react-native';
 
 
 export default class Main extends Component {
@@ -15,28 +17,15 @@ export default class Main extends Component {
     return (
         <View style = {styles.container}>
           <Header />
-          	<ScrollView style = {styles.scollContainer}>
-
-          	</ScrollView>
-
-          	<View style = {styles.footer}>
-
-          		<TextInput 
-          		style = {styles.textInput}
-          		placeholder = '>note'
-          		placeholderTextColor = 'white'>
-
-          		</TextInput>
-
-          	</View>
-
+          <NotesContainer />
+          <AddNoteButton />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-	container: {
+    container: {
         flex: 1,
     },
     header: {
@@ -65,8 +54,8 @@ const styles = StyleSheet.create({
         zIndex: 10
     },
     searchBar: {
-    	color: 'black',
-    	backgroundColor: '#E91E63'
+        color: 'black',
+        backgroundColor: '#E91E63'
     },
     textInput: {
         alignSelf: 'stretch',

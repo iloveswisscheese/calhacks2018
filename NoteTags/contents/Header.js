@@ -1,17 +1,19 @@
 import React from 'react';
+import {
+    Text,
+    View,
+    StyleSheet,
+    TextInput,
+    ScrollView,
+    TouchableOpacity
+    } from 'react-native';
+
 
 export default class Header extends React.Component {
   render() {
     return (
             <View style = {styles.header}>
                   <Text style = {styles.headerText}> - NoteTags - </Text>
-            </View>
-
-            <View style = {styles.searchBar}>
-                  <TextInput style = {styles.textInput}
-                  placeholder = 'search'
-                  placeholderTextColor = 'black'>
-                  </TextInput>
             </View>
     );
   }
