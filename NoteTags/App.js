@@ -5,7 +5,7 @@
  * @format
  * @flow
  */
- 
+
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
@@ -37,15 +37,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 30,
+    fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
   instructions: {
-    fontSize: 20,
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
   },
 });
-
