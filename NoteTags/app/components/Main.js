@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './contents/Header'
 import {
 	Text,
 	View,
@@ -8,35 +9,26 @@ import {
 	TouchableOpacity
 	} from 'react-native';
 
+
 export default class Main extends Component {
   render() {
     return (
-      <View style = {styles.container}>
-      	<View style = {styles.header}>
-      		<Text style = {styles.headerText}> - NoteTags - </Text>
-      	</View>
+        <View style = {styles.container}>
+          <Header />
+          	<ScrollView style = {styles.scollContainer}>
 
-      	<View style = {styles.searchBar}>
-      		<TextInput style = {styles.textInput}
-      		placeholder = 'search'
-      		placeholderTextColor = 'black'>
-      		</TextInput>
-      	</View>
+          	</ScrollView>
 
-      	<ScrollView style = {styles.scollContainer}>
+          	<View style = {styles.footer}>
 
-      	</ScrollView>
+          		<TextInput 
+          		style = {styles.textInput}
+          		placeholder = '>note'
+          		placeholderTextColor = 'white'>
 
-      	<View style = {styles.footer}>
+          		</TextInput>
 
-      		<TextInput 
-      		style = {styles.textInput}
-      		placeholder = '>note'
-      		placeholderTextColor = 'white'>
-
-      		</TextInput>
-
-      	</View>
+          	</View>
 
       </View>
     );
