@@ -12,9 +12,17 @@ import {
 export default class Header extends React.Component {
   render() {
     return (
+        <View>
             <View style = {styles.header}>
-                  <Text style = {styles.headerText}> - NoteTags - </Text>
+                <Text style = {styles.headerText}> - NoteTags - </Text>
             </View>
+            <View style = {styles.searchBar}>
+                <TextInput style = {styles.searchBarText}
+                placeholder = 'Search'
+                placeholderTextColor = 'silver'>
+                </TextInput>
+            </View>
+        </View>
     );
   }
 }
@@ -26,56 +34,24 @@ const styles = StyleSheet.create({
     header: {
         backgroundColor: '#252525',
         alignItems: 'center',
-        justifyContent:'center',
-        borderBottomWidth: 10,
-        borderBottomColor: '#482734'
+        justifyContent:'center'
     },
     headerText: {
         color: 'white',
         fontSize: 18,
-        borderTopWidth: 15,
+        borderTopWidth: 40,
         borderTopColor: '#ddd',
         padding: 15
     },
-    scrollContainer: {
-        flex: 1,
-        marginBottom: 100
-    },
-    footer: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        zIndex: 10
-    },
     searchBar: {
-      color: 'black',
-      backgroundColor: '#E91E63'
+        alignItems: 'stretch',
+        justifyContent:'center',
+        backgroundColor: '#482734',
     },
-    textInput: {
-        alignSelf: 'stretch',
-        color: '#fff',
-        padding: 20,
-        backgroundColor: '#dddddd',
-        borderTopWidth:2,
-        borderTopColor: '#ededed'
-    },
-    addButton: {
-        position: 'absolute',
-        zIndex: 11,
-        right: 20,
-        bottom: 90,
-        backgroundColor: '#E91E63',
-        width: 70,
-        height: 70,
-        borderRadius: 35,
-        alignItems: 'center',
-        justifyContent: 'center',
-        elevation: 8
-    },
-    addButtonText: {
-        color: '#fff',
-        fontSize: 24
+    searchBarText: {
+        color: 'white',
+        fontSize: 15,
+        padding: 12
     }
 })
       
